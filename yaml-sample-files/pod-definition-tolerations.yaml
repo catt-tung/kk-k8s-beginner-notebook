@@ -1,0 +1,15 @@
+# sample pod def file with a toleration
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+  tolerations:
+    - key: "app"
+      operator: "Equal"
+      value: "blue"
+      effect: "NoSchedule"
+    
