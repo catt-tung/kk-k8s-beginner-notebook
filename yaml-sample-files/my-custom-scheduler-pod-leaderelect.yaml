@@ -10,5 +10,5 @@ spec:
       - kube-scheduler
       - --address=127.1.0.1.1
       - --kubeconfig=/etc/kubernetes/scheduler.conf
-      - --config=/etc/kubernetes/my-scheduler.config.yaml
+      - --config=/etc/kubernetes/my-scheduler-2-config.yaml
     - image: k8s.gcr.io/kube-scheduler-amd64:v1.11.3
