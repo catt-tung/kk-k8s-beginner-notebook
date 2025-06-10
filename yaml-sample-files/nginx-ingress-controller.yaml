@@ -1,0 +1,20 @@
+#p37 of my notes
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-ingress-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-ingress
+  template:
+    metadata:
+      labels:
+        app: nginx-ingress
+    spec:
+      containers:
+      - name: nginx-ingress-controller
+        image: quay.io/kubernetes-ingress-controller/nginx-ingress-controller/:0.21.0
+        args:
+        - /nginx-ingress-controller
