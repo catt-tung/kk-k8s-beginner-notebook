@@ -1,0 +1,5 @@
+#p37 of my notes
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: nginx-configuration
