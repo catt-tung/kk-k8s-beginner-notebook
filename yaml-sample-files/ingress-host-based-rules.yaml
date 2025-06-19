@@ -1,0 +1,21 @@
+#p 38 of my notes
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-host-based
+spec:
+  rules:
+  - host: wear.domain.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: wear-service
+          servicePort: 80
+  - host: watch.domain.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: watch-service
+          servicePort: 80
