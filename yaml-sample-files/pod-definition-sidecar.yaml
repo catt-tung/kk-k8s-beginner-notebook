@@ -1,0 +1,18 @@
+#p39 of my notes
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-sidecar
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+    volumeMounts:
+      - mountPath: /usr/share/nginx/html
+        name: shared-data
+  - name: sidecar-container
+    image: fluent/fluentd
+    volumeMounts:
+      - mountPath: /pod-data
+        name: shared-data
+    
