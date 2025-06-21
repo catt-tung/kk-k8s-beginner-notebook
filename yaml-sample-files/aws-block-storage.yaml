@@ -1,0 +1,6 @@
+#p 43 on my notes
+volumes:
+- name: data-volume
+  awsElasticBlockStore:
+    volumeID: <volumeID>
+    fsType: ext4
